@@ -1,0 +1,334 @@
+
+@media (min-width: 320px) {
+    .item-client, .table-body, .table-head {
+        width: 728px;
+        padding: 0;
+    }
+
+    .table-container {
+        overflow-x: scroll;
+    }
+
+    .table-head {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+    }
+
+    .btn-change-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .header-site__search {
+        display: none;
+    }
+
+    .header-site__logo {
+        margin: 0 auto;
+    }
+
+    .table-head__ID, .client-id {
+        padding: 0 0 0 20px;
+    }
+
+    .table-head__actions {
+        padding: 0 20px 0 0;
+    }
+
+    .client-id {
+        display: block;
+        margin: 0 20px 0 0;
+    }
+
+    .table-head__ID, .client-id {
+        width: 10%;
+    }
+
+    .table-head__abbr-name {
+        margin: 0 40px 0 0;
+    }
+
+    .table-head__contact {
+        margin: 0 50px 0 0;
+    }
+
+    .table-head__abbr-name, .client-name {
+        width: 25%;
+    }
+
+    .table-head__date-create, .table-head__date-changes, .created-date, .update-date {
+        width: 15%;
+    }
+
+    .change-client-btn::after, .delete-client-btn::after {
+        left: 7%;
+    }
+
+    .change-client-btn {
+        margin: 0 0 5px 0;
+    }
+
+    .contact-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        max-height: 60px;
+    }
+
+    .icon-contact {
+        margin-bottom: 2px;
+    }
+
+    .modal-window {
+        display: block;
+        background-color: white;
+        min-height: 215px;
+        width: 250px;
+        position: absolute;
+        z-index: 2000;
+        left: 30vw;
+        top: 20vh;
+        /* -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); */
+        padding: 25px 15px;
+        -webkit-animation: show 1s ease-in-out;
+                animation: show 1s ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    @-webkit-keyframes show {
+        from { opacity: 0; }
+        to { opacity: 1; }
+       }
+
+    @keyframes show {
+        from { opacity: 0; }
+        to { opacity: 1; }
+       }
+
+    .add-contact-container::before {
+        content: '';
+        width: 15px;
+        display: block;
+        top: 0;
+        position: absolute;
+        left: -6%;
+        height: 100%;
+        background-color: rgba(200, 197, 209, 0.2);
+    }
+
+    .add-contact-container::after {
+        content: '';
+        width: 15px;
+        display: block;
+        top: 0;
+        position: absolute;
+        right: -6%;
+        height: 100%;
+        background-color: rgba(200, 197, 209, 0.2);
+    }
+
+    .btn-add-contact {
+        cursor: pointer;
+        color: var(--txt_black);
+        font-weight: 600;
+        width: 100%;
+        padding: 8px 0;
+        font-size: 12px;
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.99998 3.66659C6.63331 3.66659 6.33331 3.96659 6.33331 4.33325V6.33325H4.33331C3.96665 6.33325 3.66665 6.63325 3.66665 6.99992C3.66665 7.36659 3.96665 7.66659 4.33331 7.66659H6.33331V9.66659C6.33331 10.0333 6.63331 10.3333 6.99998 10.3333C7.36665 10.3333 7.66665 10.0333 7.66665 9.66659V7.66659H9.66665C10.0333 7.66659 10.3333 7.36659 10.3333 6.99992C10.3333 6.63325 10.0333 6.33325 9.66665 6.33325H7.66665V4.33325C7.66665 3.96659 7.36665 3.66659 6.99998 3.66659ZM6.99998 0.333252C3.31998 0.333252 0.333313 3.31992 0.333313 6.99992C0.333313 10.6799 3.31998 13.6666 6.99998 13.6666C10.68 13.6666 13.6666 10.6799 13.6666 6.99992C13.6666 3.31992 10.68 0.333252 6.99998 0.333252ZM6.99998 12.3333C4.05998 12.3333 1.66665 9.93992 1.66665 6.99992C1.66665 4.05992 4.05998 1.66659 6.99998 1.66659C9.93998 1.66659 12.3333 4.05992 12.3333 6.99992C12.3333 9.93992 9.93998 12.3333 6.99998 12.3333Z' fill='%239873FF'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: 22% 50%;
+        transition: opacity .3s ease-in-out;
+        opacity: 1;
+    }
+
+    .btn-add-disable {
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+    }
+
+    .modal-close {
+        position: absolute;
+        left: 92%;
+        top: 5%;
+        cursor: pointer;
+    }
+    
+    .choices {
+        width: 27%;
+        background-color: var(--select_color);
+        outline: 1px solid var(--input_gray);
+        padding: 10px 12px;
+        margin-bottom: 0;
+    }
+
+    .delete-item-contact {
+        width: 10%;
+        background-color: var(--select_color);
+        outline: 1px solid var(--input_gray);
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0C2.682 0 0 2.682 0 6C0 9.318 2.682 12 6 12C9.318 12 12 9.318 12 6C12 2.682 9.318 0 6 0ZM6 10.8C3.354 10.8 1.2 8.646 1.2 6C1.2 3.354 3.354 1.2 6 1.2C8.646 1.2 10.8 3.354 10.8 6C10.8 8.646 8.646 10.8 6 10.8ZM8.154 3L6 5.154L3.846 3L3 3.846L5.154 6L3 8.154L3.846 9L6 6.846L8.154 9L9 8.154L6.846 6L9 3.846L8.154 3Z' fill='%23B0B0B0'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+
+}    
+
+@media (min-width: 768px) {
+
+    .table-head__ID {
+        width: 13%;
+    }
+
+    .table-head__abbr-name {
+        width: 25%;
+    }
+
+    .created-date, .update-date {
+        width: 10%;
+    }
+
+    .table-head__date-create, .table-head__date-changes {
+        width: 13%;
+    }
+
+    .table-head__contact, .table-head__actions {
+        width: 9%;
+    }
+
+    .change-client-btn::after, .delete-client-btn::after {
+        left: 7%;
+    }
+
+    .change-client-btn {
+        margin: 0 0 5px 0;
+    }
+
+    .header-site__search {
+        display: block;
+    }
+
+    .header-site__logo {
+        width: 50px; height: 50px;
+        margin: 0 55px 0 0;
+    }
+
+    .table-container {
+        overflow-x: hidden;
+    }
+
+    .item-client, .table-body, .table-head {
+        width: 100%;
+        padding: 0;
+    }
+
+    .span-color {
+        display: inline-block;
+        padding: 5px 0 0 0;
+    }
+
+    .modal-window {
+        min-height: 215px;
+        width: 450px;
+        position: absolute;
+        z-index: 2000;
+        padding: 25px 30px;
+    }
+
+    .modal-close {
+        left: 95%;
+    }
+
+    .choices {
+        width: 16%;
+    }
+
+    .delete-item-contact {
+        width: 6%;
+    }
+
+    .add-contact-container::before {
+        width: 30px;
+        left: -6.6%;
+    }
+    
+    .add-contact-container::after {
+        width: 30px;
+        right: -6.7%;
+    }
+
+    .btn-add-contact {
+        font-size: 14px;
+        background-position: 30% 50%;
+    }
+
+}
+
+@media (min-width: 924px) {
+
+    .table-head__ID {
+        width: 11%;
+    }
+
+    .table-head__date-create, .created-date, .table-head__date-changes, .update-date {
+        width: 13%;
+    }
+
+    .table-head__contact, .table-head__actions {
+        width: 10%;
+    }
+
+    .btn-change-container {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+
+    .change-client-btn::after {
+        left: -23%;
+    }
+
+    .delete-client-btn::after {
+        left: -30%;
+    }
+
+    .table-head, .table-body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .contact-list {
+        width: 13%;
+    }
+
+    .icon-contact {
+        margin-bottom: 7px;
+    }
+
+    .btn-change-container {
+        padding: 0 10px 0 0;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .table-head__abbr-name, .client-name {
+        width: 28%;
+    }
+
+    .span-color {
+        padding: 0;
+    }
+
+    .created-date, .update-date {
+        width: 13%;
+    }
+}
